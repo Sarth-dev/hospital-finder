@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hospital Finder Web App
 
-## Getting Started
+A responsive web application built with Next.js and React to help users find affordable hospitals for specific diseases. The app fetches hospital data from a backend Express.js API and provides dynamic filtering by city, rating, and government schemes.
 
-First, run the development server:
+## Features
 
-```bash
+- Search hospitals by disease name.
+- Filter hospitals by city, minimum rating, and government healthcare schemes.
+- Responsive UI using Tailwind CSS.
+- Displays hospital details including specialists, address, rating, service hours, and estimated treatment prices.
+- Backend API built with Express.js serving hospital data with CORS enabled.
+
+## Technologies Used
+
+- Frontend: Next.js, React, Tailwind CSS
+- Backend: Node.js, Express.js
+- Data fetching: REST API
+- State management: React Hooks
+- Styling: Tailwind CSS
+
+## Setup and Installation
+
+### Backend
+
+1. Navigate to the backend directory.
+
+2. Install dependencies:
+
+npm install express cors
+
+text
+
+3. Run the Express server:
+
+node server.js
+
+text
+
+Backend runs on `https://hospitalfinder-backend.onrender.com`.
+
+### Frontend
+
+1. Navigate to the frontend directory.
+
+2. Install dependencies:
+
+npm install
+
+text
+
+3. Run the Next.js dev server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+text
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open `https://hospital-finder-sandy.vercel.app` to access the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Endpoints
 
-## Learn More
+- `GET /hospitals?disease=<disease-name>`  
+  Returns hospitals treating the specified disease.
 
-To learn more about Next.js, take a look at the following resources:
+- Optional:  
+  `GET /hospitals/all`  
+  Returns all hospitals data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Enter a disease name in the search box (e.g., "dengue fever", "appendicitis").
 
-## Deploy on Vercel
+2. Use the dropdown filters to refine results by city, minimum rating, or government schemes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Click Search to fetch and display matching hospitals.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+- `/app`: Next.js app frontend code.
+- `/index.js`: Express backend server with hospital data API.
+- `/components`: Reusable UI components like `HospitalCard`.
+
+## License
+
+This project is open source and free to use.
+
+---
