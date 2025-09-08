@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useState } from "react";
 import Footer from "../component/Footer";
@@ -48,7 +49,7 @@ export default function AllHospitalsPage() {
     async function fetchHospitals() {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:4000/hospitals/all"); // Adjust endpoint as per your backend
+        const res = await fetch("https://hospitalfinder-backend.onrender.com/hospitals/all"); // Adjust endpoint as per your backend
         if (!res.ok) {
           const err = await res.json();
           setError(err.error || "Failed to fetch hospitals");

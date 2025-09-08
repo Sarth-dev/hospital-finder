@@ -85,7 +85,7 @@ export default function HospitalFinder() {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/hospitals?disease=${encodeURIComponent(disease.toLowerCase())}`
+        `https://hospitalfinder-backend.onrender.com/hospitals?disease=${encodeURIComponent(disease.toLowerCase())}`
       );
       if (!response.ok) {
         const errRes = await response.json();
