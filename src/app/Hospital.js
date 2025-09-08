@@ -152,7 +152,7 @@ console.log("Fetched data:", data);
     <div className="min-h-screen bg-yellow-50 py-10 px-2">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-blue-800 mb-10">
-          Find Affordable Hospital for Disease
+          Find Affordable Hospital Near You
         </h1>
         <form
           onSubmit={searchHospitals}
